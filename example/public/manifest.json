@@ -1,0 +1,8 @@
+{
+  "short_name": "my-eighties-computer",
+  "name": "my-eighties-computer",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
