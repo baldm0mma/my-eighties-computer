@@ -24,21 +24,20 @@ My80sPText.propTypes = {
 export class My80sInput extends Component {
   constructor() {
     super();
-    this.state = {
-      content: ''
-    };
+    this.state = {};
   }
 
   handleChange = e => {
     const content = e.target.value;
-    this.setState({ content });
+    const name = e.target.name;
+    this.setState({ [name]: content });
   };
 
   render = () => {
-    const { label, type, placeholder } = this.props;
+    const { label, type, placeholder, labelTop } = this.props;
     return (
       <label>
-        {label}:
+        {label}:{labelTop && <br />}
         <input
           type={type}
           name={label}
@@ -54,10 +53,20 @@ export class My80sInput extends Component {
 My80sInput.propTypes = {
   label: PropTypes.string,
   type: PropTypes.string,
-  placeholder: PropTypes.string,
+  placeholder: PropTypes.string
 };
 
 // Button
-export const My80sButton = ({ text, className="", ...props }) => {
-  return <button className={"80s-button " + className} {...props}>{text}</button>;
+export const My80sButton = ({ text, className = '', onClick }) => {
+  return (
+    <button className={'my-80s-button ' + className} onClick={onClick}>
+      {text}
+    </button>
+  );
+};
+
+My80sButton.propTypes = {
+  text: PropTypes.string,
+  className: PropTypes.string,
+  onClick: PropTypes.func
 };
