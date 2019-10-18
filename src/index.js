@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './index.css';
+import styles from './index.css';
 
 // H1
 export const My80sH1 = ({ text }) => {
-  return <h1>{text}</h1>;
+  return <h1 className={styles.my80sH1}>{text}</h1>;
 };
 
 My80sH1.propTypes = {
@@ -13,7 +13,7 @@ My80sH1.propTypes = {
 
 // Simple paragraph text
 export const My80sPText = ({ text }) => {
-  return <p>{text}</p>;
+  return <p className={styles.my80sPText}>{text}</p>;
 };
 
 My80sPText.propTypes = {
@@ -21,10 +21,14 @@ My80sPText.propTypes = {
 };
 
 // Input
-export class My80sInput extends Component {
+export class My80sLogin extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      username: '',
+      email: '',
+      password: ''
+    };
   }
 
   handleChange = e => {
@@ -33,40 +37,74 @@ export class My80sInput extends Component {
     this.setState({ [name]: content });
   };
 
+  handleSubmit = () => {
+    this.props.onSubmit(this.state);
+    this.setState({ username: '', email: '', password: '' });
+  };
+
   render = () => {
-    const { label, type, placeholder, labelTop } = this.props;
+    const { text } = this.props;
     return (
-      <label>
-        {label}:{labelTop && <br />}
-        <input
-          type={type}
-          name={label}
-          placeholder={placeholder}
-          value={this.state.content}
-          onChange={this.handleChange}
-        />
-      </label>
+      <form className={styles.my80sLogin}>
+        <h3 className={styles.my80sH3}>{text}</h3>
+        <div className={styles.form__label__container}>
+          <label className={styles.my80sLabel}>
+            Username:
+            <br />
+            <input
+              className={styles.my80sInput}
+              name='username'
+              onChange={this.handleChange}
+              placeholder='Username'
+              type='text'
+              value={this.state.username}
+            />
+          </label>
+        </div>
+
+        <div className={styles.form__label__container}>
+          <label className={styles.my80sLabel}>
+            Email:
+            <br />
+            <input
+              className={styles.my80sInput}
+              name='email'
+              onChange={this.handleChange}
+              placeholder='Email address'
+              type='text'
+              value={this.state.email}
+            />
+          </label>
+        </div>
+
+        <div className={styles.form__label__container}>
+          <label className={styles.my80sLabel}>
+            Password:
+            <br />
+            <input
+              className={styles.my80sInput}
+              name='password'
+              onChange={this.handleChange}
+              placeholder='Password'
+              type='text'
+              value={this.state.password}
+            />
+          </label>
+        </div>
+
+        <div>
+          <input
+            className={styles.my80sButton}
+            onClick={this.handleSubmit}
+            type='button'
+            value='Submit'
+          />
+        </div>
+      </form>
     );
   };
 }
 
-My80sInput.propTypes = {
-  label: PropTypes.string,
-  type: PropTypes.string,
-  placeholder: PropTypes.string
-};
-
-// Button
-export const My80sButton = ({ text, className = '', onClick }) => {
-  return (
-    <button className={'my-80s-button ' + className} onClick={onClick}>
-      {text}
-    </button>
-  );
-};
-
-My80sButton.propTypes = {
-  text: PropTypes.string,
-  className: PropTypes.string,
-  onClick: PropTypes.func
+My80sLogin.propTypes = {
+  onSubmit: PropTypes.func
 };
