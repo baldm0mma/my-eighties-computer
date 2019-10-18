@@ -24,6 +24,8 @@ export default class App extends Component {
           text='This is your badass 80s account creation modal'
           onSubmit={content => console.log(content)}
         />
+        <br />
+        <br />
       </div>
     );
   }

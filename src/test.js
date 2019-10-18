@@ -1,7 +1,12 @@
-import ExampleComponent from './'
+import { My80sH1 } from './';
 
-describe('ExampleComponent', () => {
-  it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+describe('My80sComponets', () => {
+  describe('My80sH1', () => {
+    it('is truthy', () => {
+      expect(My80sH1).toBeTruthy();
+    });
+    it('should take a single prop which is of type "string"', () => {
+      
+    });
+  });
+});
