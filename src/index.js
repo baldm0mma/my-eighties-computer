@@ -20,8 +20,8 @@ My80sPText.propTypes = {
   text: PropTypes.string
 };
 
-// Input
-export class My80sLogin extends Component {
+// Account creation modal
+export class My80sAccCreateModal extends Component {
   constructor() {
     super();
     this.state = {
@@ -45,7 +45,7 @@ export class My80sLogin extends Component {
   render = () => {
     const { text } = this.props;
     return (
-      <form className={styles.my80sLogin}>
+      <form className={styles.my80sCreate}>
         <h3 className={styles.my80sH3}>{text}</h3>
         <div className={styles.form__label__container}>
           <label className={styles.my80sLabel}>
@@ -105,6 +105,81 @@ export class My80sLogin extends Component {
   };
 }
 
-My80sLogin.propTypes = {
-  onSubmit: PropTypes.func
+My80sAccCreateModal.propTypes = {
+  onSubmit: PropTypes.func,
+  text: PropTypes.string,
+};
+
+// Account login modal
+export class My80sAccLoginModal extends Component {
+  constructor() {
+    super();
+    this.state = {
+      username: '',
+      password: ''
+    };
+  }
+
+  handleChange = e => {
+    const content = e.target.value;
+    const name = e.target.name;
+    this.setState({ [name]: content });
+  };
+
+  handleSubmit = () => {
+    this.props.onSubmit(this.state);
+    this.setState({ username: '', password: '' });
+  };
+
+  render = () => {
+    const { text } = this.props;
+    return (
+      <form className={styles.my80sLogin}>
+        <h3 className={styles.my80sH3}>{text}</h3>
+        <div className={styles.form__label__container}>
+          <label className={styles.my80sLabel}>
+            Username:
+            <br />
+            <input
+              className={styles.my80sInput}
+              name='username'
+              onChange={this.handleChange}
+              placeholder='Username'
+              type='text'
+              value={this.state.username}
+            />
+          </label>
+        </div>
+
+        <div className={styles.form__label__container}>
+          <label className={styles.my80sLabel}>
+            Password:
+            <br />
+            <input
+              className={styles.my80sInput}
+              name='password'
+              onChange={this.handleChange}
+              placeholder='Password'
+              type='text'
+              value={this.state.password}
+            />
+          </label>
+        </div>
+
+        <div>
+          <input
+            className={styles.my80sButton}
+            onClick={this.handleSubmit}
+            type='button'
+            value='Submit'
+          />
+        </div>
+      </form>
+    );
+  };
+}
+
+My80sAccCreateModal.propTypes = {
+  onSubmit: PropTypes.func,
+  text: PropTypes.string,
 };
