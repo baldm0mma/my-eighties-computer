@@ -50,7 +50,7 @@ describe('My80sComponets', () => {
       expect(wrapper.state().email).toEqual('');
       expect(wrapper.state().password).toEqual('');
     });
-    it('should invoke the handleChange() function when input values are changed', () => {
+    it('should invoke the handleChange() function when input values are changed, and change state accordingly', () => {
       let wrapper = mount(<My80sAccCreateModal />);
       wrapper
         .find('#username')
