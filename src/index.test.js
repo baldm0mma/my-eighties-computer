@@ -31,7 +31,7 @@ describe('My80sComponets', () => {
 
   describe('My80sAccCreateModal', () => {
     it('should be truthy', () => {
-      expect
+      expect(My80sAccCreateModal).toBeTruthy();
     });
   });
 });
