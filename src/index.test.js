@@ -45,13 +45,13 @@ describe('My80sComponets', () => {
       expect(wrapper.props().onSubmit).toEqual(mockFunc);
     });
     it('should begin with an initial state of 3 key value pairs, all which have empty strings as default values', () => {
-      let wrapper = mount(<My80sAccCreateModal />);
+      let wrapper = shallow(<My80sAccCreateModal />);
       expect(wrapper.state().username).toEqual('');
       expect(wrapper.state().email).toEqual('');
       expect(wrapper.state().password).toEqual('');
     });
     it('should invoke the handleChange() function when input values are changed, and change state accordingly', () => {
-      let wrapper = mount(<My80sAccCreateModal />);
+      let wrapper = shallow(<My80sAccCreateModal />);
       wrapper
         .find('#username')
         .simulate('change', { target: { value: 'j', name: 'username' } });
