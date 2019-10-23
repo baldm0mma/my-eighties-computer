@@ -44,6 +44,14 @@ describe('My80sComponets', () => {
       expect(wrapper.props().text).toEqual('CModalTest');
       expect(wrapper.props().onSubmit).toEqual(mockFunc);
     });
-    it('should ')
+    it('should begin with an initial state of 3 key value pairs, all which have empty strings as default values', () => {
+      let mockFunc = jest.fn();
+      let wrapper = mount(
+        <My80sAccCreateModal text='CModalTest' onSubmit={mockFunc} />
+      );
+      expect(wrapper.state().username).toEqual('');
+      expect(wrapper.state().email).toEqual('');
+      expect(wrapper.state().password).toEqual('');
+    });
   });
 });
