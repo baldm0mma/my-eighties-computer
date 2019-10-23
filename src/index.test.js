@@ -33,5 +33,8 @@ describe('My80sComponets', () => {
     it('should be truthy', () => {
       expect(My80sAccCreateModal).toBeTruthy();
     });
+    it('should render without crashing', () => {
+      shallow(<My80sAccCreateModal />);
+    })
   });
 });
