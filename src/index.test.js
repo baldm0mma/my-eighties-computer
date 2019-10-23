@@ -35,6 +35,13 @@ describe('My80sComponets', () => {
     });
     it('should render without crashing', () => {
       shallow(<My80sAccCreateModal />);
-    })
+    });
+    it('should take 2 arguments', () => {
+      let wrapper = mount(
+        <My80sAccCreateModal text='CModalTest' onSubmit={() => 'hello world'} />
+      );
+      expect(wrapper.props().text).tpEqual('CModalTest');
+      expect(wrapper.props().onSubmit).toEqual('hello world');
+    });
   });
 });
