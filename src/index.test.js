@@ -44,5 +44,6 @@ describe('My80sComponets', () => {
       expect(wrapper.props().text).toEqual('CModalTest');
       expect(wrapper.props().onSubmit).toEqual(mockFunc);
     });
+    it('should ')
   });
 });
