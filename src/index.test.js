@@ -37,11 +37,12 @@ describe('My80sComponets', () => {
       shallow(<My80sAccCreateModal />);
     });
     it('should take 2 arguments', () => {
+      let mockFunc = jest.fn();
       let wrapper = mount(
-        <My80sAccCreateModal text='CModalTest' onSubmit={() => 'hello world'} />
+        <My80sAccCreateModal text='CModalTest' onSubmit={mockFunc} />
       );
-      expect(wrapper.props().text).tpEqual('CModalTest');
-      expect(wrapper.props().onSubmit).toEqual('hello world');
+      expect(wrapper.props().text).toEqual('CModalTest');
+      expect(wrapper.props().onSubmit).toEqual(mockFunc);
     });
   });
 });
