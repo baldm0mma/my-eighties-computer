@@ -179,7 +179,7 @@ export class My80sAccLoginModal extends Component {
   };
 }
 
-My80sAccCreateModal.propTypes = {
+My80sAccLoginModal.propTypes = {
   onSubmit: PropTypes.func,
   text: PropTypes.string,
 };

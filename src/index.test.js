@@ -28,4 +28,10 @@ describe('My80sComponets', () => {
       expect(wrapper.props().text).toEqual('pTest');
     });
   });
+
+  describe('My80sAccCreateModal', () => {
+    it('should be truthy', () => {
+      expect
+    });
+  });
 });
