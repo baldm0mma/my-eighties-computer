@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { My80sH1, My80sPText } from '.';
+import { My80sH1, My80sPText, My80sAccCreateModal } from '.';
 
 describe('My80sComponets', () => {
   describe('My80sH1', () => {
