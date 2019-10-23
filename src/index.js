@@ -53,6 +53,7 @@ export class My80sAccCreateModal extends Component {
             <br />
             <input
               className={styles.my80sInput}
+              id='username'
               name='username'
               onChange={this.handleChange}
               placeholder='Username'
@@ -68,6 +69,7 @@ export class My80sAccCreateModal extends Component {
             <br />
             <input
               className={styles.my80sInput}
+              id='email'
               name='email'
               onChange={this.handleChange}
               placeholder='Email address'
@@ -83,6 +85,7 @@ export class My80sAccCreateModal extends Component {
             <br />
             <input
               className={styles.my80sInput}
+              id='password'
               name='password'
               onChange={this.handleChange}
               placeholder='Password'

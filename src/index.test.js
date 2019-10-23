@@ -45,13 +45,25 @@ describe('My80sComponets', () => {
       expect(wrapper.props().onSubmit).toEqual(mockFunc);
     });
     it('should begin with an initial state of 3 key value pairs, all which have empty strings as default values', () => {
-      let mockFunc = jest.fn();
-      let wrapper = mount(
-        <My80sAccCreateModal text='CModalTest' onSubmit={mockFunc} />
-      );
+      let wrapper = mount(<My80sAccCreateModal />);
       expect(wrapper.state().username).toEqual('');
       expect(wrapper.state().email).toEqual('');
       expect(wrapper.state().password).toEqual('');
+    });
+    it('should invoke the handleChange() function when input values are changed', () => {
+      let wrapper = mount(<My80sAccCreateModal />);
+      wrapper
+        .find('#username')
+        .simulate('change', { target: { value: 'j', name: 'username' } });
+      expect(wrapper.state().username).toEqual('j');
+      wrapper
+        .find('#email')
+        .simulate('change', { target: { value: 'e', name: 'email' } });
+      expect(wrapper.state().email).toEqual('e');
+      wrapper
+        .find('#password')
+        .simulate('change', { target: { value: 'v', name: 'password' } });
+      expect(wrapper.state().password).toEqual('v');
     });
   });
 });
