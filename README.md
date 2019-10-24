@@ -31,12 +31,12 @@ npm install --save my-eighties-computer
 ```jsx
 import React, { Component } from 'react'
 
-import My80sComponent from 'my-eighties-computer'
+import My80sAccCreateModal from 'my-eighties-computer'
 
 class Example extends Component {
   render () {
     return (
-      <My80sComponent 
+      <My80sAccCreateModal 
         text='This is your badass 80s account creation modal' 
         onSubmit={content => yourCallbackFunction(content) 
       />
