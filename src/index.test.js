@@ -101,6 +101,17 @@ describe('My80sComponets', () => {
       expect(wrapper.state().username).toEqual('');
       expect(wrapper.state().password).toEqual('');
     });
-    
+    it('should invoke the handleChange() function when input values are changed, and change state accordingly', () => {
+      let wrapper = shallow(<My80sAccLoginModal />);
+      wrapper
+        .find('#username')
+        .simulate('change', { target: { value: 'j', name: 'username' } });
+      expect(wrapper.state().username).toEqual('j');
+      wrapper
+        .find('#password')
+        .simulate('change', { target: { value: 'f', name: 'password' } });
+      expect(wrapper.state().password).toEqual('f');
+    });
+
   });
 });
