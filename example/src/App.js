@@ -21,7 +21,7 @@ export default class App extends Component {
         <br />
         <br />
         <My80sAccLoginModal
-          text='This is your badass 80s account creation modal'
+          text='This is your badass 80s account login modal'
           onSubmit={content => console.log(content)}
         />
         <br />
