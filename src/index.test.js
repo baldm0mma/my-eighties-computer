@@ -82,6 +82,9 @@ describe('My80sComponets', () => {
   });
 
   describe('My80sAccLoginModal', () => {
+    it('should be truthy', () => {
+      expect(My80sAccLoginModal).toBeTruthy();
+    });
     
   });
 });
