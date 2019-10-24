@@ -98,6 +98,7 @@ export class My80sAccCreateModal extends Component {
         <div>
           <input
             className={styles.my80sButton}
+            id='submit-button'
             onClick={this.handleSubmit}
             type='button'
             value='Submit'

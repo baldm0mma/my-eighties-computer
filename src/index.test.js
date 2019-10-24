@@ -65,5 +65,14 @@ describe('My80sComponets', () => {
         .simulate('change', { target: { value: 'v', name: 'password' } });
       expect(wrapper.state().password).toEqual('v');
     });
+    it('should invoke handleSubmit() when the button is clicked', () => {
+      let mockFunc = jest.fn();
+      let wrapper = mount(<My80sAccCreateModal onSubmit={mockFunc} />);
+      let instance = wrapper.instance();
+      let instance.handleSubmit() = jest.fn();
+      jest.spyOn(instance, 'handleSubmit')
+      wrapper.find('#submit-button').simulate('click');
+      expect(realHandle).toHaveBeenCalled();
+    });
   });
 });
