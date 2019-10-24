@@ -96,6 +96,11 @@ describe('My80sComponets', () => {
       expect(wrapper.props().text).toEqual('LModalTest');
       expect(wrapper.props().onSubmit).toEqual(mockFunc);
     });
+    it('should begin with an initial state of 2 key value pairs, all which have empty strings as default values', () => {
+      let wrapper = shallow(<My80sAccLoginModal />);
+      expect(wrapper.state().username).toEqual('');
+      expect(wrapper.state().password).toEqual('');
+    });
     
   });
 });
