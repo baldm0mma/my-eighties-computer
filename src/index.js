@@ -111,7 +111,7 @@ export class My80sAccCreateModal extends Component {
 
 My80sAccCreateModal.propTypes = {
   onSubmit: PropTypes.func,
-  text: PropTypes.string,
+  text: PropTypes.string
 };
 
 // Account login modal
@@ -146,6 +146,7 @@ export class My80sAccLoginModal extends Component {
             <br />
             <input
               className={styles.my80sInput}
+              id='username'
               name='username'
               onChange={this.handleChange}
               placeholder='Username'
@@ -161,6 +162,7 @@ export class My80sAccLoginModal extends Component {
             <br />
             <input
               className={styles.my80sInput}
+              id='password'
               name='password'
               onChange={this.handleChange}
               placeholder='Password'
@@ -173,6 +175,7 @@ export class My80sAccLoginModal extends Component {
         <div>
           <input
             className={styles.my80sButton}
+            id='submit-button'
             onClick={this.handleSubmit}
             type='button'
             value='Submit'
@@ -185,5 +188,5 @@ export class My80sAccLoginModal extends Component {
 
 My80sAccLoginModal.propTypes = {
   onSubmit: PropTypes.func,
-  text: PropTypes.string,
+  text: PropTypes.string
 };

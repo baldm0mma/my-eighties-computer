@@ -1,6 +1,11 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { My80sH1, My80sPText, My80sAccCreateModal } from '.';
+import {
+  My80sH1,
+  My80sPText,
+  My80sAccCreateModal,
+  My80sAccLoginModal
+} from '.';
 
 describe('My80sComponets', () => {
   describe('My80sH1', () => {
@@ -74,5 +79,9 @@ describe('My80sComponets', () => {
       expect(mockFunc).toHaveBeenCalled();
       expect(mockFunc).toHaveBeenCalledWith(newState);
     });
+  });
+
+  describe('My80sAccLoginModal', () => {
+    
   });
 });
