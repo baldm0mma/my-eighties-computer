@@ -61,5 +61,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "sinon": "^7.5.0"
+  }
 }
