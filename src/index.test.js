@@ -112,6 +112,14 @@ describe('My80sComponets', () => {
         .simulate('change', { target: { value: 'f', name: 'password' } });
       expect(wrapper.state().password).toEqual('f');
     });
-
+    it('should invoke handleSubmit() when the button is clicked, and pass the current state as an argument', () => {
+      let mockFunc = jest.fn();
+      let wrapper = mount(<My80sAccLoginModal onSubmit={mockFunc} />);
+      let newState = { username: 'jev', password: 'kev' };
+      wrapper.setState(newState);
+      wrapper.find('#submit-button').simulate('click');
+      expect(mockFunc).toHaveBeenCalled();
+      expect(mockFunc).toHaveBeenCalledWith(newState);
+    });
   });
 });
