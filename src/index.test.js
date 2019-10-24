@@ -88,6 +88,14 @@ describe('My80sComponets', () => {
     it('should render without crashing', () => {
       shallow(<My80sAccLoginModal />);
     });
+    it('should take 2 arguments', () => {
+      let mockFunc = jest.fn();
+      let wrapper = mount(
+        <My80sAccLoginModal text='LModalTest' onSubmit={mockFunc} />
+      );
+      expect(wrapper.props().text).toEqual('LModalTest');
+      expect(wrapper.props().onSubmit).toEqual(mockFunc);
+    });
     
   });
 });
