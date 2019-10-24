@@ -72,7 +72,7 @@ describe('My80sComponets', () => {
     });
     it('should invoke handleSubmit() when the button is clicked, and pass the current state as an argument', () => {
       let mockFunc = jest.fn();
-      let wrapper = mount(<My80sAccCreateModal onSubmit={mockFunc} />);
+      let wrapper = shallow(<My80sAccCreateModal onSubmit={mockFunc} />);
       let newState = { username: 'jev', email: 'bev', password: 'kev' };
       wrapper.setState(newState);
       wrapper.find('#submit-button').simulate('click');
@@ -114,7 +114,7 @@ describe('My80sComponets', () => {
     });
     it('should invoke handleSubmit() when the button is clicked, and pass the current state as an argument', () => {
       let mockFunc = jest.fn();
-      let wrapper = mount(<My80sAccLoginModal onSubmit={mockFunc} />);
+      let wrapper = shallow(<My80sAccLoginModal onSubmit={mockFunc} />);
       let newState = { username: 'jev', password: 'kev' };
       wrapper.setState(newState);
       wrapper.find('#submit-button').simulate('click');
