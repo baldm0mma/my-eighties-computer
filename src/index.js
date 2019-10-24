@@ -28,7 +28,7 @@ export class My80sAccCreateModal extends Component {
       username: '',
       email: '',
       password: ''
-    }
+    };
   }
 
   handleChange = e => {
