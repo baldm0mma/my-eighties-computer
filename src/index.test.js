@@ -85,6 +85,9 @@ describe('My80sComponets', () => {
     it('should be truthy', () => {
       expect(My80sAccLoginModal).toBeTruthy();
     });
+    it('should render without crashing', () => {
+      shallow(<My80sAccLoginModal />);
+    });
     
   });
 });
