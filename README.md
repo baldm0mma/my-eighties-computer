@@ -1,6 +1,6 @@
 # my-eighties-computer
 
-> Renders 4 80s computer styled components to play with...
+> Renders four 80s computer styled components to play with...
 
 `My80sH1` is an 80's computer styled h1 element that takes a single prop, which is the text to be displayed.
 
