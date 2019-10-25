@@ -1,6 +1,6 @@
 {
   "name": "my-eighties-computer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Renders a few 80s computer styled components to play with",
   "author": "baldm0mma",
   "license": "MIT",
@@ -61,5 +61,16 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "eighties",
+    "80s",
+    "80's",
+    "computer",
+    "modal",
+    "login",
+    "account creation",
+    "styled component",
+    "old school"
   ]
 }
