@@ -38,7 +38,7 @@ export class My80sAccCreateModal extends Component {
   };
 
   handleSubmit = () => {
-    this.props.onSubmit(this.state);
+    this.props.onSubmit ? this.props.onSubmit(this.state) : console.log(this.state);
     this.setState({ username: '', email: '', password: '' });
   };
 
@@ -131,7 +131,7 @@ export class My80sAccLoginModal extends Component {
   };
 
   handleSubmit = () => {
-    this.props.onSubmit(this.state);
+    this.props.onSubmit ? this.props.onSubmit(this.state) : console.log(this.state);
     this.setState({ username: '', password: '' });
   };
 

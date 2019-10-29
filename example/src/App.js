@@ -16,13 +16,13 @@ export default class App extends Component {
         <br />
         <My80sAccCreateModal
           text='This is your badass 80s account creation modal'
-          onSubmit={content => console.log(content)}
+          // onSubmit={content => console.log(content)}
         />
         <br />
         <br />
         <My80sAccLoginModal
           text='This is your badass 80s account login modal'
-          onSubmit={content => console.log(content)}
+          // onSubmit={content => console.log(content)}
         />
         <br />
         <br />

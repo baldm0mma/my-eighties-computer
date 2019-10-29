@@ -26,7 +26,7 @@
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
 | `text` | `String` | An empty string | The text to be displayed by the h1 element |
-| `text` | `String` | An empty string | The text to be displayed by the h1 element |
+| `onSubmit` | `Function` | An empty string | The text to be displayed by the h1 element |
 
 ![My80sAccCreateModal Component](./assets/My80sAccCreateModal.png)
 
