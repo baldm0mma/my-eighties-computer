@@ -26,11 +26,17 @@
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
 | `text` | `String` | An empty string | The text to be displayed by the h1 element |
-| `onSubmit` | `Function` | An empty string | The text to be displayed by the h1 element |
+| `onSubmit` | `Function` | Console logs the current component's controlled state | A callback function that will send the current controlled state of the form inputs back to a parent component for use |
 
 ![My80sAccCreateModal Component](./assets/My80sAccCreateModal.png)
 
 `My80sAccLoginModal` takes the same props as `My80sAccCreateModal`. The only difference is that instead of 3 form input fields, it only has 2: 'username', and 'password'; but doesn't include the email field.
+
+### Props
+| Name | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+| `text` | `String` | An empty string | The text to be displayed by the h1 element |
+| `onSubmit` | `Function` | Console logs the current component's controlled state | A callback function that will send the current controlled state of the form inputs back to a parent component for use |
 
 ![My80sAccLoginModal Component](./assets/My80sAccLoginModal.png)
 
