@@ -4,7 +4,7 @@
 
 `My80sH1` is an 80's computer styled h1 element that takes a single prop, which is the text to be displayed.
 
-###Props
+### Props
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
 | `text` | String | '' | The text to be displayed by the h1 element |
