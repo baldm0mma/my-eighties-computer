@@ -1,7 +1,7 @@
 {
   "name": "my-eighties-computer",
-  "version": "1.0.3",
-  "description": "Renders a few 80s computer styled components to play with",
+  "version": "1.0.4",
+  "description": "Renders a four 80s computer styled components to play with",
   "author": "baldm0mma",
   "license": "MIT",
   "repository": "baldm0mma/my-eighties-computer",

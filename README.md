@@ -2,27 +2,33 @@
 
 > Renders four 80s computer styled components to play with...
 
+## My80sH1
+
 `My80sH1` is an 80's computer styled h1 element that takes a single prop, which is the text to be displayed.
 
-### Props
+#### Props
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
 | `text` | `String` | An empty string | The text to be displayed by the h1 element |
 
 ![My80sH1 Component](./assets/My80sH1.png)
 
+## My80sPText
+
 `My80sPText` is an 80's computer styled paragraph element that takes a single prop, which is the text to be displayed.
 
-### Props
+#### Props
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
 | `text` | `String` | An empty string | The text to be displayed by the paragraph text element |
 
 ![My80sPText Component](./assets/My80sPText.png)
 
+## My80sAccCreateModal
+
 `My80sAccCreateModal` is an 80's computer styled account creation modal that is comprised of 3 inputs (username, email, password), and a button. This component takes 2 props, one is the title text to be displayed at the top of the form, and the second is a callback function that will send the current controlled state of the form inputs back to a parent component for use.
 
-### Props
+#### Props
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
 | `text` | `String` | An empty string | The text to be displayed by the h1 element |
@@ -30,9 +36,11 @@
 
 ![My80sAccCreateModal Component](./assets/My80sAccCreateModal.png)
 
+## My80sAccLoginModal
+
 `My80sAccLoginModal` takes the same props as `My80sAccCreateModal`. The only difference is that instead of 3 form input fields, it only has 2: 'username', and 'password'; but doesn't include the email field.
 
-### Props
+#### Props
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
 | `text` | `String` | An empty string | The text to be displayed by the h1 element |
